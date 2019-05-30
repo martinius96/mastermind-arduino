@@ -20,7 +20,7 @@ LCD 20x4 alebo 16x2 <img src="https://e.allegroimg.com/s128/03e03d/70fb2d2a4ea29
 
 I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340b9ac50b03ae628e8a5" width="64" height="64">
 
-
+# Zapojenie
 |LCD displej s I2C prevodníkom|	Arduino Uno|
 | ------------- | ------------- |
 |Vcc	|5V|
@@ -37,6 +37,7 @@ I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340
 |DIN	|D13|
 |GND	|GND|
 |5V	|-|
-  <div class="alert alert-info">
-            5V pin sa pripája na externý zdroj z dôvodu veľkého nárazového odberu prúdu zvlášť pri rozsvietení všetkých diód, rádovo 200mA.
-          </div>
+**5V pin sa pripája na externý zdroj z dôvodu veľkého nárazového odberu prúdu zvlášť pri rozsvietení všetkých diód, rádovo 200mA.**
+
+# Obrázkové zapojenie
+<img src="https://i.imgur.com/RI8Dq1A.png" style="display: block; max-width: 100%; height: auto;">
