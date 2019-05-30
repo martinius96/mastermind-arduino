@@ -27,15 +27,16 @@ I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340
 |GND	|GND|
 |SDA	|A4 (SDA)|
 |SCK/SCL|	A5 (SCK/SCL)|
-|Pushbutton|	Arduino Uno|
-| ------------- | ------------- |
+|**Pushbutton**|	**Arduino Uno**|
 |IN 1	|D6|
 |IN 2	|D5|
 |IN 3	|D4|
 |IN 4	|D3|
 |Enter|	D2|
-|RGB led diódy|	Arduino Uno|
-| ------------- | ------------- |
+|**RGB led diódy**|	**Arduino Uno**|
 |DIN	|D13|
 |GND	|GND|
 |5V	|-|
+  <div class="alert alert-info">
+            5V pin sa pripája na externý zdroj z dôvodu veľkého nárazového odberu prúdu zvlášť pri rozsvietení všetkých diód, rádovo 200mA.
+          </div>
