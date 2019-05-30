@@ -2,6 +2,7 @@
 // VYPIS DO SERIAL MONITOR-u.
 // MOZNOST DOPLNIT O RGB LED, LED PASY, NEOPIXEL RING A INE.
 // PRI ROZPINACICH PUSHBUTTONOCH OTOCIT LOGIKU - ACTIVE LOW
+//#define DEBUG //odkomentuj pre DEBUG INFO
 const int buttonPin1 = 6;
 const int buttonPin2 = 5;
 const int buttonPin3 = 4;
@@ -58,14 +59,14 @@ void setup() {
   while ((cielovecislo4 == cielovecislo1) || (cielovecislo4 == cielovecislo2) || (cielovecislo4 == cielovecislo3)) {
     cielovecislo4 = random(0, 9);
   }
-  Serial.println("Prve cislo");
-  Serial.println(cielovecislo1);
-  Serial.println("Druhe cislo");
-  Serial.println(cielovecislo2);
-  Serial.println("Tretie cislo");
-  Serial.println(cielovecislo3);
-  Serial.println("Stvrte cislo");
-  Serial.println(cielovecislo4);
+#ifdef DEBUG
+  Serial.println("Hladane cislo: ");
+  Serial.print(cielovecislo1);
+  Serial.print(cielovecislo2);
+  Serial.print(cielovecislo3);
+  Serial.print(cielovecislo4);
+  Serial.println("");
+#endif
 }
 
 void loop() {
@@ -212,14 +213,5 @@ void loop() {
     lastButtonState3 = reading3;
     lastButtonState4 = reading4;
     lastButtonState5 = reading5;
-    //DEBUG
-    Serial.println("Nase zadane cislo 1:");
-    Serial.println(cislo1);
-    Serial.println("Nase zadane cislo 2:");
-    Serial.println(cislo2);
-    Serial.println("Nase zadane cislo 3:");
-    Serial.println(cislo3);
-    Serial.println("Nase zadane cislo 4:");
-    Serial.println(cislo4);
   }
 }
