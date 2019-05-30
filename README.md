@@ -19,3 +19,23 @@ Arduino Uno R3 <img src="https://s3-ap-northeast-1.amazonaws.com/switch-science-
 LCD 20x4 alebo 16x2 <img src="https://e.allegroimg.com/s128/03e03d/70fb2d2a4ea2949c1b2f8c0154de" width="64" height="64">
 
 I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340b9ac50b03ae628e8a5" width="64" height="64">
+
+
+|LCD displej s I2C prevodníkom|	Arduino Uno|
+| ------------- | ------------- |
+|Vcc	|5V|
+|GND	|GND|
+|SDA	|A4 (SDA)|
+|SCK/SCL|	A5 (SCK/SCL)|
+|Pushbutton|	Arduino Uno|
+| ------------- | ------------- |
+|IN 1	|D6|
+|IN 2	|D5|
+|IN 3	|D4|
+|IN 4	|D3|
+|Enter|	D2|
+|RGB led diódy|	Arduino Uno|
+| ------------- | ------------- |
+|DIN	|D13|
+|GND	|GND|
+|5V	|-|
