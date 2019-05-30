@@ -37,6 +37,7 @@ I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340
 |DIN	|D13|
 |GND	|GND|
 |5V	|-|
+#
 **5V pin sa pripája na externý zdroj z dôvodu veľkého nárazového odberu prúdu zvlášť pri rozsvietení všetkých diód, rádovo 200mA.**
 
 # Obrázkové zapojenie
