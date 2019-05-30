@@ -11,7 +11,11 @@
 
 # Hardvér pre projekt
 Arduino Uno R3 <img src="https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg" width="64" height="64">
+
 4x RGB LED WS2812 (jeden modul) <img src="https://rukminim1.flixcart.com/image/128/128/jen4vww0/learning-toy/y/c/n/ws2812-8-bit-stright-rgb-led-driver-for-flight-controller-original-imaf3ah6eymgyhpx.jpeg?q=70" width="64" height="64">
+
 5x tlačidlo - spínacie <img src="https://http2.mlstatic.com/push-button-cuadrado-6x6x73mm-con-boton-redondo-D_NQ_NP_824716-MPE28317610646_102018-F.jpg" width="64" height="64">
+
 LCD 20x4 alebo 16x2 <img src="https://e.allegroimg.com/s128/03e03d/70fb2d2a4ea2949c1b2f8c0154de" width="64" height="64">
+
 I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340b9ac50b03ae628e8a5" width="64" height="64">
