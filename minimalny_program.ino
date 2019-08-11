@@ -19,16 +19,16 @@ int cielovecislo2 = 0;
 int cielovecislo3 = 0;
 int cielovecislo4 = 0;
 
-int buttonState1;
-int lastButtonState1 = LOW;
-int buttonState2;
-int lastButtonState2 = LOW;
-int buttonState3;
-int lastButtonState3 = LOW;
-int buttonState4;
-int lastButtonState4 = LOW;
-int buttonState5;
-int lastButtonState5 = LOW;
+int buttonState1 = HIGH;
+int lastButtonState1 = HIGH;
+int buttonState2 = HIGH;
+int lastButtonState2 = HIGH;
+int buttonState3 = HIGH;
+int lastButtonState3 = HIGH;
+int buttonState4 = HIGH;
+int lastButtonState4 = HIGH;
+int buttonState5 = HIGH;
+int lastButtonState5 = HIGH;
 
 unsigned long lastDebounceTime1 = 0;
 unsigned long lastDebounceTime2 = 0;
@@ -40,11 +40,11 @@ unsigned long debounceInterval = 50;
 int pokus = 0;
 void setup() {
   Serial.begin(9600);
-  pinMode(buttonPin1, INPUT);
-  pinMode(buttonPin2, INPUT);
-  pinMode(buttonPin3, INPUT);
-  pinMode(buttonPin4, INPUT);
-  pinMode(buttonPin5, INPUT);
+  pinMode(buttonPin1, INPUT_PULLUP);
+  pinMode(buttonPin2, INPUT_PULLUP);
+  pinMode(buttonPin3, INPUT_PULLUP);
+  pinMode(buttonPin4, INPUT_PULLUP);
+  pinMode(buttonPin5, INPUT_PULLUP);
 
   cielovecislo1 = random(0, 9);
   cielovecislo2 = random(0, 9);
@@ -105,6 +105,8 @@ void loop() {
         buttonState1 = reading1;
         if (buttonState1 == HIGH) {
           cislo1++;
+          Serial.println("Prve cislo: ");
+          Serial.print(cislo1);
           if (cislo1 > 9) {
             cislo1 = 0;
           }
@@ -117,6 +119,8 @@ void loop() {
         buttonState2 = reading2;
         if (buttonState2 == HIGH) {
           cislo2++;
+          Serial.println("Druhe cislo: ");
+          Serial.print(cislo2);
           if (cislo2 > 9) {
             cislo2 = 0;
           }
@@ -129,6 +133,8 @@ void loop() {
         buttonState3 = reading3;
         if (buttonState3 == HIGH) {
           cislo3++;
+          Serial.println("Tretie cislo: ");
+          Serial.print(cislo3);
           if (cislo3 > 9) {
             cislo3 = 0;
           }
@@ -141,6 +147,8 @@ void loop() {
         buttonState4 = reading4;
         if (buttonState4 == HIGH) {
           cislo4++;
+          Serial.println("Stvrte cislo: ");
+          Serial.print(cislo4);
           if (cislo4 > 9) {
             cislo4 = 0;
           }
