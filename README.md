@@ -42,6 +42,7 @@ I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340
 
 # 
 |Znak na displeji|	Vysvetlivka|
+| ------------- | ------------- |
 |C	|uhadnuté číslo na inej pozícii|
 |=	|uhádnuté číslo aj s pozíciou|
 |-	|neuhádnuté číslo, ani pozicia|
