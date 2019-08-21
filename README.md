@@ -40,6 +40,12 @@ I2C prevodník pre LCD <img src="https://5.allegroimg.com/s128/0323c6/28d4e43340
 #
 **5V pin sa pripája na externý zdroj z dôvodu veľkého nárazového odberu prúdu zvlášť pri rozsvietení všetkých diód, rádovo 200mA.**
 
+# 
+|Znak na displeji|	Vysvetlivka|
+|C	|uhadnuté číslo na inej pozícii|
+|=	|uhádnuté číslo aj s pozíciou|
+|-	|neuhádnuté číslo, ani pozicia|
+
 # Zapojenie komponentov:
 <img src="https://i.imgur.com/TCVXVBB.png" style="display: block; max-width: 100%; height: auto;">
 
