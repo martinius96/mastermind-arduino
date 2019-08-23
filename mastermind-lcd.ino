@@ -14,7 +14,7 @@
 /*| - --> neuhadnute cislo, ani pozicia                                        |*/
 /*|----------------------------------------------------------------------------|*/
 
-//#define DEBUG //odkomentuj pre DEBUG INFO (ZOBRAZENIE HLADANEHO CISLA)
+#define DEBUG //odkomentuj pre DEBUG INFO (ZOBRAZENIE HLADANEHO CISLA)
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x3F, 20, 4);
@@ -29,6 +29,7 @@ int cislo1 = 0;
 int cislo2 = 0;
 int cislo3 = 0;
 int cislo4 = 0;
+
 
 int cielovecislo1 = 0;
 int cielovecislo2 = 0;
@@ -65,13 +66,13 @@ void setup() {
   pinMode(buttonPin5, INPUT_PULLUP);
   randomSeed(analogRead(0));
   lcd.setCursor(0, 0); //nastav kurzor pre zapis na 1. riadok, 1. stlpec
-  lcd.print("ZADANE CISLO: 0000");
+  lcd.print("ZADANE CISLO:   0000");
   generuj_cisla();
 #ifdef DEBUG
   lcd.setCursor(0, 2);
   lcd.print("DEBUG ON:");
   lcd.setCursor(0, 3);
-  lcd.print("HLADANE CISLO: ");
+  lcd.print("HLADANE CISLO:  ");
   lcd.print(cielovecislo1);
   lcd.print(cielovecislo2);
   lcd.print(cielovecislo3);
@@ -167,6 +168,11 @@ void loop() {
 
     if ((millis() - lastDebounceTime5) > debounceInterval) {
       if (reading5 != buttonState5) {
+        lcd.setCursor(16, 1);
+        lcd.print(cislo1);
+        lcd.print(cislo2);
+        lcd.print(cislo3);
+        lcd.print(cislo4);
         buttonState5 = reading5;
         if (buttonState5 == HIGH) {
           pokus++;
@@ -188,7 +194,7 @@ void loop() {
 }
 
 void updateLCD() {
-  lcd.setCursor(14, 0);
+  lcd.setCursor(16, 0);
   lcd.print(cislo1);
   lcd.print(cislo2);
   lcd.print(cislo3);
