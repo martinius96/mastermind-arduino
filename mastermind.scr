@@ -1,0 +1,56 @@
+# NetScript
+# 
+# Exported from mastermind.sch at 25. 8. 2019 1:25
+# 
+# EAGLE Version 9.0.1 Copyright (c) 1988-2018 Autodesk, Inc.
+# 
+Change Class 0;
+Signal '3V3'      'M1'       'J2.14' \
+                  ;
+Change Class 0;
+Signal 'N$1'      'M1'       'J2.4' \
+                  'U$1'      'J1.1' \
+                  ;
+Change Class 0;
+Signal 'N$2'      'M1'       'J1.4' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE4' '2' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE5' '2' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE6' '2' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE7' '2' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE8' '2' \
+                  ;
+Change Class 0;
+Signal 'N$3'      'M1'       'J1.9' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE4' '1' \
+                  ;
+Change Class 0;
+Signal 'N$4'      'M1'       'J1.8' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE5' '1' \
+                  ;
+Change Class 0;
+Signal 'N$5'      'M1'       'J1.7' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE6' '1' \
+                  ;
+Change Class 0;
+Signal 'N$6'      'M1'       'J1.6' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE8' '1' \
+                  ;
+Change Class 0;
+Signal 'N$7'      'M1'       'J1.5' \
+                  'TLACIDLO_PRE_SPUSTENIE_ZASTAVENIE7' '1' \
+                  ;
+Change Class 0;
+Signal 'N$8'      'M1'       'J2.8' \
+                  'U$1'      'J1.2' \
+                  ;
+Change Class 0;
+Signal 'N$9'      'M1'       'J2.7' \
+                  'U$1'      'J1.3' \
+                  ;
+Change Class 0;
+Signal 'N$10'     'M1'       'J2.2' \
+                  'U$1'      'J1.4' \
+                  ;
+Change Class 0;
+Signal 'VIN'      'M1'       'J2.1' \
+                  ;
