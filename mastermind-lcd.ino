@@ -2,7 +2,7 @@
 /*|SKETCH PRE MASTERMIND IMPLEMENTACIU                                         |*/
 /*|VYHOTOVIL: MARTIN CHLEBOVEC                                                 |*/
 /*|PODPOR PROJEKT PRE VIAC VARIANT, SUPPORT: https://paypal.me/chlebovec       |*/
-/*|Doska: Arduino Uno / AtMega328P                                             |*/
+/*|Doska: Arduino Uno / ATmega328P                                             |*/
 /*|MAXIMALNY POCET POKUSOV: 10                                                 |*/
 /*|POCET VSTUPOV: 5X PUSHBUTTON - SPINACIE TLACIDLA                            |*/
 /*|VYGENEROVANE 4-CISLIE: KAZDE CISLO JE ROZNE V ROZSAHU 0-9 BEZ OPAKOVANIA!   |*/
@@ -17,7 +17,7 @@
 #define DEBUG //odkomentuj pre DEBUG INFO (ZOBRAZENIE HLADANEHO CISLA)
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-LiquidCrystal_I2C lcd(0x3F, 20, 4);
+LiquidCrystal_I2C lcd(0x3F, 20, 4); // 0x27
 
 const int buttonPin1 = 6;
 const int buttonPin2 = 5;
@@ -66,13 +66,13 @@ void setup() {
   pinMode(buttonPin5, INPUT_PULLUP);
   randomSeed(analogRead(0));
   lcd.setCursor(0, 0); //nastav kurzor pre zapis na 1. riadok, 1. stlpec
-  lcd.print("ZADANE CISLO:   0000");
+  lcd.print(F("ZADANE CISLO:   0000"));
   generuj_cisla();
 #ifdef DEBUG
   lcd.setCursor(0, 2);
-  lcd.print("DEBUG ON:");
+  lcd.print(F("DEBUG ON:"));
   lcd.setCursor(0, 3);
-  lcd.print("HLADANE CISLO:  ");
+  lcd.print(F("HLADANE CISLO:  "));
   lcd.print(cielovecislo1);
   lcd.print(cielovecislo2);
   lcd.print(cielovecislo3);
@@ -83,9 +83,9 @@ void setup() {
 void loop() {
   if (pokus >= 10) {
     lcd.setCursor(0, 2);
-    lcd.print("PREHRALI STE!");
+    lcd.print(F("PREHRALI STE!"));
     lcd.setCursor(0, 3);
-    lcd.print("KONIEC HRY          ");
+    lcd.print(F("KONIEC HRY          "));
     while (1);
   } else {
     int reading1 = digitalRead(buttonPin1);
@@ -200,7 +200,7 @@ void updateLCD() {
   lcd.print(cislo3);
   lcd.print(cislo4);
   lcd.setCursor(0, 1);
-  lcd.print("POKUS: ");
+  lcd.print(F("POKUS: "));
   lcd.print(pokus);
 }
 
@@ -223,53 +223,53 @@ void generuj_cisla() {
 void over_cisla() {
   if (cislo1 == cielovecislo1) {
     lcd.setCursor(10, 1);
-    lcd.print("="); //UHADNUTE CISLO VRATANE POZICIE
+    lcd.print(F("=")); //UHADNUTE CISLO VRATANE POZICIE
   } else if ((cislo1 == cielovecislo2) || (cislo1 == cielovecislo3) || (cislo1 == cielovecislo4)) {
     lcd.setCursor(10, 1);
-    lcd.print("C"); //UHADNUTE CISLO BEZ POZICIE
+    lcd.print(F("C")); //UHADNUTE CISLO BEZ POZICIE
   } else {
     lcd.setCursor(10, 1);
-    lcd.print("-"); //NEUHADNUTE CISLO, ANI POZICIA
+    lcd.print(F("-")); //NEUHADNUTE CISLO, ANI POZICIA
   }
 
   if (cislo2 == cielovecislo2) {
     lcd.setCursor(11, 1);
-    lcd.print("="); //UHADNUTE CISLO VRATANE POZICIE
+    lcd.print(F("=")); //UHADNUTE CISLO VRATANE POZICIE
   } else if ((cislo2 == cielovecislo1) || (cislo2 == cielovecislo3) || (cislo2 == cielovecislo4)) {
     lcd.setCursor(11, 1);
-    lcd.print("C"); //UHADNUTE CISLO BEZ POZICIE
+    lcd.print(F("C")); //UHADNUTE CISLO BEZ POZICIE
   } else {
     lcd.setCursor(11, 1);
-    lcd.print("-"); //NEUHADNUTE CISLO, ANI POZICIA
+    lcd.print(F("-")); //NEUHADNUTE CISLO, ANI POZICIA
   }
 
   if (cislo3 == cielovecislo3) {
     lcd.setCursor(12, 1);
-    lcd.print("="); //UHADNUTE CISLO VRATANE POZICIE
+    lcd.print(F("=")); //UHADNUTE CISLO VRATANE POZICIE
   } else if ((cislo3 == cielovecislo1) || (cislo3 == cielovecislo2) || (cislo3 == cielovecislo4)) {
     lcd.setCursor(12, 1);
-    lcd.print("C"); //UHADNUTE CISLO BEZ POZICIE
+    lcd.print(F("C")); //UHADNUTE CISLO BEZ POZICIE
   } else {
     lcd.setCursor(12, 1);
-    lcd.print("-"); //NEUHADNUTE CISLO, ANI POZICIA
+    lcd.print(F("-")); //NEUHADNUTE CISLO, ANI POZICIA
   }
 
   if (cislo4 == cielovecislo4) {
     lcd.setCursor(13, 1);
-    lcd.print("="); //UHADNUTE CISLO VRATANE POZICIE
+    lcd.print(F("=")); //UHADNUTE CISLO VRATANE POZICIE
   } else if ((cislo4 == cielovecislo1) || (cislo4 == cielovecislo2) || (cislo4 == cielovecislo3)) {
     lcd.setCursor(13, 1);
-    lcd.print("C"); //UHADNUTE CISLO BEZ POZICIE
+    lcd.print(F("C")); //UHADNUTE CISLO BEZ POZICIE
   } else {
     lcd.setCursor(13, 1);
-    lcd.print("-"); //NEUHADNUTE CISLO, ANI POZICIA
+    lcd.print(F("-")); //NEUHADNUTE CISLO, ANI POZICIA
   }
 
   if ((cislo1 == cielovecislo1) && (cislo2 == cielovecislo2) && (cislo3 == cielovecislo3) && (cislo4 == cielovecislo4)) {
     lcd.setCursor(0, 2);
-    lcd.print("VYHRALI STE!");
+    lcd.print(F("VYHRALI STE!"));
     lcd.setCursor(0, 3);
-    lcd.print("KONIEC HRY          ");
+    lcd.print(F("KONIEC HRY          "));
     while (1);
   }
 }
