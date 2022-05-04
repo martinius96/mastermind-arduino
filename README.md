@@ -1,4 +1,5 @@
 # Popis - Mastermind logika
+* WOKWI simulation: https://wokwi.com/projects/330731536467886676
 | Hráč 1 (háda) <img src="https://i.imgur.com/0raweRW.png" width="64" height="64"> | Hráč 2 (Arduino-generátor) <img src="https://www.makerspaces.com/wp-content/uploads/2017/08/381932-arduino-atmega-circuit-component-current-electric-.png" width="64" height="64"> |
 | ------------- | ------------- |
 | Úlohou hráča je uhádnuť čísla druhého hráča a aj ich poradie | V úlohe mikrokontróler Arduino Uno, alebo iný, prípadne AtMega čip|
