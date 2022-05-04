@@ -1,5 +1,5 @@
 # Popis - Mastermind logika
-| Hráč 1 (háda) <img src="https://image.flaticon.com/icons/svg/236/236831.svg" width="64" height="64"> | Hráč 2 (Arduino-generátor) <img src="https://www.makerspaces.com/wp-content/uploads/2017/08/381932-arduino-atmega-circuit-component-current-electric-.png" width="64" height="64"> |
+| Hráč 1 (háda) <img src="https://i.imgur.com/0raweRW.png" width="64" height="64"> | Hráč 2 (Arduino-generátor) <img src="https://www.makerspaces.com/wp-content/uploads/2017/08/381932-arduino-atmega-circuit-component-current-electric-.png" width="64" height="64"> |
 | ------------- | ------------- |
 | Úlohou hráča je uhádnuť čísla druhého hráča a aj ich poradie | V úlohe mikrokontróler Arduino Uno, alebo iný, prípadne AtMega čip|
 | Hráč na vstup do systému využíva 5x pushbutton, pričom 4 z tlačidiel fungujú ako inkrementátor čísla na tej danej pozícii v rozsahu 0-9  | Vygeneruje číslo 0000-9999, ktoré bude hráč hádať, **pričom sa čísla neopakujú!**|
