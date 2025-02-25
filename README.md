@@ -1,5 +1,4 @@
 # Popis - Mastermind logika
-* WOKWI simulation: https://wokwi.com/projects/330731536467886676
 | Hráč 1 (háda) <img src="https://i.imgur.com/0raweRW.png" width="64" height="64" alt="Hráč 1"> | Hráč 2 (Arduino-generátor) <img src="https://www.makerspaces.com/wp-content/uploads/2017/08/381932-arduino-atmega-circuit-component-current-electric-.png" width="64" height="64" alt="Hráč 2"> |
 |:-------------------------------------------------|:-------------------------------------------------|
 | Úlohou hráča je uhádnuť čísla druhého hráča a aj ich poradie | V úlohe mikrokontróler Arduino Uno, alebo iný, prípadne AtMega čip |
@@ -10,7 +9,7 @@
 | V opačnom prípade pri neuhádnutí čísla, respektíve pri uhádnutí čísla ale neuhádnutí pozície sa zosvieti červená dióda na znak nepravdy | Hra sa končí, ak hráč 1 uhádne všetky čísla aj ich pozície (všetky 4 diódy budú zelené), vstup sa zablokuje, alebo pri neúspešnej hre s dosiahnutím 10 pokusov |
 | Pre hráča sa hra končí pri presiahnutí 10 pokusov, alebo pri uhádnutí kombinácie | O stave hry je používateľ vždy informovaný na displeji |
 
-
+* WOKWI simulation: https://wokwi.com/projects/330731536467886676
 
 # Hardvér pre projekt
 Arduino Uno R3 <img src="https://s3-ap-northeast-1.amazonaws.com/switch-science-intl/contents/small/789_201602_102_tBuTiHx.jpg" width="64" height="64">
